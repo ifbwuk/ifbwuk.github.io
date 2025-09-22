@@ -8,7 +8,6 @@
       background: #111;
       overflow: hidden;
       position: relative;
-      font-family: sans-serif;
     }
 
     /* container for rain */
@@ -24,9 +23,9 @@
 
     .raindrop {
       position: absolute;
-      width: 1px;
-      height: 15px; /* longer line */
-      background: rgba(255, 255, 255, 0.15);
+      width: 2px; /* make slightly thicker */
+      height: 20px; /* longer line */
+      background: rgba(255, 255, 255, 0.2); /* semi-transparent */
       border-radius: 50%;
       animation-name: fall;
       animation-timing-function: linear;
@@ -35,14 +34,14 @@
 
     @keyframes fall {
       0% {
-        transform: translateY(-20px) translateX(0);
+        transform: translateY(-25px) translateX(0);
         opacity: 0;
       }
       10% {
-        opacity: 0.1;
+        opacity: 0.2;
       }
       100% {
-        transform: translateY(110vh) translateX(5px); /* drift slightly sideways */
+        transform: translateY(110vh) translateX(20px); /* drift right slightly */
         opacity: 0;
       }
     }
@@ -51,28 +50,23 @@
 <body>
   <div id="rain-container"></div>
 
-  <!-- example footer -->
-  <footer style="position: relative; z-index: 1; background:#222; color:#aaa; text-align:center; padding:1rem;">
-    Footer Content
-  </footer>
-
   <script>
     const container = document.getElementById('rain-container');
-    const NUM_DROPS = 200; // more drops = denser rain
+    const NUM_DROPS = 300; // more = denser rain
 
     for (let i = 0; i < NUM_DROPS; i++) {
       const drop = document.createElement('div');
       drop.className = 'raindrop';
       drop.style.left = Math.random() * window.innerWidth + 'px';
       drop.style.top = Math.random() * window.innerHeight + 'px';
-      drop.style.height = 10 + Math.random() * 20 + 'px'; // variable line lengths
-      drop.style.opacity = 0.05 + Math.random() * 0.15; // more transparent
-      drop.style.animationDuration = (3 + Math.random() * 5) + 's'; // different speeds
-      container.appendChild(drop);
-    }
+      drop.style.height = 15 + Math.random() * 25 + 'px'; // variable lengths
+      drop.style.opacity = 0.1 + Math.random() * 0.2; // semi-transparent
+      drop.style.animationDuration = (2 + Math.random() * 4) + 's'; // different speeds
+      container.appendChild(drop); // im sigma
+    } 
   </script>
 </body>
-</html>
+</html> 
 
 <html lang="en">
 <head>
