@@ -110,22 +110,27 @@ footer {
     .modal:target {
       display: flex; 
     }
-    .modal__window {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 400px;
-      text-align: center;
-    }
-    .modal__close {
-      float: right;
-      text-decoration: none;
-      color: #aaa;
-      font-weight: bold;
-    }
-    .modal__close:hover {
-      color: #000;
-    }
+	.modal__window {
+	  background: rgba(255, 255, 255, 0.15); /* transparent white */
+	  backdrop-filter: blur(12px) saturate(180%);
+	  -webkit-backdrop-filter: blur(12px) saturate(180%);
+	  border-radius: 16px;
+	  border: 1px solid rgba(255, 255, 255, 0.3);
+	  padding: 20px 30px;
+	  max-width: 500px;
+	  color: #f0f0f0; /* text stays bright */
+	  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+	}
+	.modal__close {
+	  float: right;
+	  text-decoration: none;
+	  font-weight: bold;
+	  font-size: 1.2rem;
+	  color: #f0f0f0;
+	}
+	.modal__close:hover {
+	  color: #ff5a5a;
+	}
   </style>
 </body>
 	
