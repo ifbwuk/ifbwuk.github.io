@@ -10,7 +10,6 @@
       position: relative;
     }
 
-    /* container for rain */
     #rain-container {
       position: fixed;
       top: 0;
@@ -18,14 +17,14 @@
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: -1; /* behind everything */
+      z-index: -1; 
     }
 
     .raindrop {
       position: absolute;
-      width: 2px; /* make slightly thicker */
-      height: 20px; /* longer line */
-      background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+      width: 2px; 
+      height: 20px; 
+      background: rgba(255, 255, 255, 0.2); 
       border-radius: 50%;
       animation-name: fall;
       animation-timing-function: linear;
@@ -41,7 +40,7 @@
         opacity: 0.2;
       }
       100% {
-        transform: translateY(110vh) translateX(20px); /* drift right slightly */
+        transform: translateY(110vh) translateX(20px); 
         opacity: 0;
       }
     }
@@ -52,16 +51,16 @@
 
   <script>
     const container = document.getElementById('rain-container');
-    const NUM_DROPS = 300; // more = denser rain
+    const NUM_DROPS = 300; 
 
     for (let i = 0; i < NUM_DROPS; i++) {
       const drop = document.createElement('div');
       drop.className = 'raindrop';
       drop.style.left = Math.random() * window.innerWidth + 'px';
       drop.style.top = Math.random() * window.innerHeight + 'px';
-      drop.style.height = 15 + Math.random() * 25 + 'px'; // variable lengths
-      drop.style.opacity = 0.1 + Math.random() * 0.2; // semi-transparent
-      drop.style.animationDuration = (2 + Math.random() * 4) + 's'; // different speeds
+      drop.style.height = 15 + Math.random() * 25 + 'px'; 
+      drop.style.opacity = 0.1 + Math.random() * 0.2; 
+      drop.style.animationDuration = (2 + Math.random() * 4) + 's'; 
       container.appendChild(drop); // im sigma
     } 
   </script>
@@ -123,9 +122,6 @@ footer {
 </head>
 
 <body>
-    <video autoplay muted loop playsinline id="bgvid">
-    <source src="https://github.com/" type="video/mp4"> /* funny background video */
-  </video>
 	<header>
     <div><strong>ifbw.uk</strong></div>
     <nav>
@@ -154,7 +150,7 @@ footer {
     <div class="modal__window">
       <a class="modal__close" href="#">x</a>
       <h2>Information</h2>
-      <p>I'm 16? also living in austria. bulgarian</p>
+      <p>I'm 16, living in Austria. I'm Bulgarian, don't call me a fucking Austrian because i live in Austria</p>
     </div>
   </div>
 
@@ -214,12 +210,12 @@ footer {
 		#bgvid {
   	  position: fixed;
    	 	top: 0;
-   	 	right: 0;              /* stick to right side */
-    	width: 50vw;           /* only half screen */
-    	height: 100vh;         /* full height */
-    	object-fit: cover;     /* fill without squish */
-    	opacity: 0.4;          /* semi-transparent */
-    	z-index: -1;           /* behind everything */
+   	 	right: 0;           
+    	width: 50vw;        
+    	height: 100vh;        
+    	object-fit: cover;    
+    	opacity: 0.4;          
+    	z-index: -1;           
   }
   </style>
 </body>
@@ -233,7 +229,7 @@ footer {
    </main>
 <footer>
   &copy; 2025 ifbw uncontrolled. built with pure hate & chaos.  
-  <a href="https://seegore.com" class="seegore">(requested) logan kennys a big gimp</a>
+  <a href="https://www.pornhub.com/embed/6721796d196d1" class="secret video">(requested) logan kennys a big gimp</a>
 </footer>
 </html>
 
