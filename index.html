@@ -55,7 +55,10 @@ footer {
 </head>
 
 <body>
-  <header>
+    <video autoplay muted loop playsinline id="bgvid">
+    <source src="https://www.pornhub.com/embed/6721796d196d1" type="video/mp4">
+  </video>
+	<header>
     <div><strong>ifbw.uk</strong></div>
     <nav>
       <a href="#links">Links</a>
@@ -132,6 +135,24 @@ footer {
 	.modal__close:hover {
 	  color: #ff5a5a;
 	}
+	 	.seegore {
+	    color: inherit;
+	    text-decoration: none;
+	    pointer-events: auto; 
+	  }
+		.seegore:hover {
+	    text-decoration: none; 
+	  }	
+		#bgvid {
+  	  position: fixed;
+   	 	top: 0;
+   	 	right: 0;              /* stick to right side */
+    	width: 50vw;           /* only half screen */
+    	height: 100vh;         /* full height */
+    	object-fit: cover;     /* fill without squish */
+    	opacity: 0.4;          /* semi-transparent */
+    	z-index: -1;           /* behind everything */
+  }
   </style>
 </body>
 	
@@ -149,12 +170,5 @@ footer {
 </html>
 
 <style>
-  .seegore {
-    color: inherit;
-    text-decoration: none;
-    pointer-events: auto; 
-  }
-  .seegore:hover {
-    text-decoration: none; 
-  }
+
 </style>
